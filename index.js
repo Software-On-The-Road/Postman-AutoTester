@@ -1,4 +1,6 @@
-function deepMap(obj) {
+function deepMap(obj, parent, functor) {
+  currParent = parent ? parent + "." : '';
+
   if (isObject(obj) && !isArray(obj)) {
     for (let key in obj) {
       if (obj.hasOwnProperty(key)) {
@@ -6,7 +8,7 @@ function deepMap(obj) {
       }
     }
   } else {
-    console.log('ai noc ', obj);
+    return functor(obj, currParent);
   }
 }
 
