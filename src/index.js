@@ -16,4 +16,14 @@ const data = {
   }
 };
 
-deepMap(data, null, postmanStrategy)
+var input = document.getElementById('inputTextArea');
+input.innerHTML = JSON.stringify(data);
+
+
+var output = document.getElementById('outputTextArea');
+
+function runConverter() {
+  const json = JSON.parse(input.value);
+
+  deepMap(json, null, postmanStrategy);
+}
