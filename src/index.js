@@ -23,7 +23,7 @@ input.innerHTML = JSON.stringify(data);
 var output = document.getElementById('outputTextArea');
 
 function runConverter() {
-  const json = JSON.parse(input.value);
+  const json = JSON.parse(input.value, null, "\t");
 
   deepMap(json, null, postmanStrategy);
 }
