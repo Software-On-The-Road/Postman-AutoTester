@@ -17,13 +17,13 @@ const data = {
 };
 
 var input = document.getElementById('inputTextArea');
-input.innerHTML = JSON.stringify(data);
+input.innerHTML = JSON.stringify(data, null, "\t");
 
 
 var output = document.getElementById('outputTextArea');
 
 function runConverter() {
-  const json = JSON.parse(input.value, null, "\t");
+  const json = JSON.parse(input.value);
 
   deepMap(json, null, postmanStrategy);
 }
