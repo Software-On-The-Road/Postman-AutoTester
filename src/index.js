@@ -28,7 +28,7 @@ function runConverter() {
   console.log(json)
   console.log("Running deepmap...");
  
-  const output = deepMap(json, null, postmanStrategy);
+  const output = deepMap(json, postmanStrategy);
 
   console.log(output);
 }
