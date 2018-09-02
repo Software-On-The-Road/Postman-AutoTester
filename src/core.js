@@ -1,13 +1,13 @@
-function deepMap(obj, functor, parent) {
+function deepMap(obj, functor, parent, acumulator) {
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
       if (isObject(obj[key]) && !Array.isArray(obj[key])) {
         let currParent = parent ? parent + "." : "";
         currParent += key;
-        functor(parent, key, "object");
-        deepMap(obj[key], functor, currParent);
+        acumulator += ' \n' + functor(parent, key, "object");
+        acumulator += deepMap(obj[key], functor, currParent, '');
       } else {
-        functor(
+        acumulator += ' \n' + functor(
           parent,
           key,
           Array.isArray(obj[key]) ? "array" : typeof obj[key]
@@ -15,7 +15,7 @@ function deepMap(obj, functor, parent) {
       }
     }
   }
-  return;
+  return acumulator;
 }
 
 // Utils

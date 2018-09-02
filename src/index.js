@@ -1,4 +1,4 @@
-const data = {
+var data = {
   a: 1,
   b: 2,
   c: {
@@ -24,11 +24,11 @@ var output = document.getElementById('outputTextArea');
 
 function runConverter() {
   console.log("Parsing input...")
-  const json = JSON.parse(input.value);
+  var json = JSON.parse(input.value);
   console.log(json)
   console.log("Running deepmap...");
  
-  const output = deepMap(json, postmanStrategy);
+  var result = deepMap(json, postmanStrategy, null, '');
 
-  console.log(output);
+  output.innerHTML = result;
 }
