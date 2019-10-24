@@ -1,0 +1,23 @@
+{
+  "name": "Postman-AutoTestAPI",
+  "version": "1.0.0",
+  "description": "Generate simple unit tests from JSONs for Postman collections",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Software-On-The-Road/Postman-AutoTestAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Software-On-The-Road/Postman-AutoTestAPI/issues"
+  },
+  "homepage": "https://github.com/Software-On-The-Road/Postman-AutoTestAPI#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
