@@ -1,0 +1,119 @@
+.a {
+   color:#5581b5;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    padding-left: 15px;
+    margin-top: 0px;
+}
+.header {
+    font-family: Source Sans Pro;
+    margin: 0;
+    height: 10vh;
+    background-color: #373d49;
+    color: white;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.header__start {
+    font-size: 23px;
+    margin: 0%;
+}
+.header__end {
+    font-size: 23px;
+    margin: 0%;
+}
+.imputs {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    background-color: #337ab7;
+    padding-bottom: 20px;
+}
+.imput__json {
+    width: 47%;
+}
+.imput__output {
+    width: 47%;
+    
+}
+.form-control[id="inputTextArea"] {
+    height: 75.5vh;
+    background-color: white;
+}
+
+.form-control[readonly] {
+    height: 75.5vh;
+    background-color: white;
+}
+.main {
+    display: grid;
+    grid-gap: 15px;
+    font-size: 30px;
+    color: white;
+}
+button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+button:hover {
+    transform: scale(1.2);
+    border: none;
+    text-decoration: none;
+}
+.tooltip.top:hover .buttom__transforms{
+    margin-left: -60px;
+    bottom: 150%;
+    left: 50%;
+}
+.footer {
+    background-color: #373d49;
+    height: 5vh;
+    color: white;
+    padding-left: 30px;
+    font-size: 22px;
+    font-family: Source Sans Pro;
+}
+@media (max-width: 900px) {
+    .imputs {
+        display: block;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 10px;
+    }
+    .form-control[id="inputTextArea"] {
+        width: 212%;
+        height: 60vh;
+    }   
+    .form-control[readonly] {
+        width: 212%;       
+    }
+    .main {
+        grid-template-columns: repeat(4, 50px);
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .title {
+        margin-top: 0%;
+    }
+    .header__start {
+        font-size: 20px;
+        margin: 0%;
+        padding-right: 20px;
+        padding-top: 5px;
+    }
+    .header__end {
+        font-size: 20px;
+        margin: 0%;
+        padding-top: 5px;
+    }
+}
