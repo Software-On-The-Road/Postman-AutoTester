@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Software-On-The-Road/Postman-AutoTestAPI#readme",
   "devDependencies": {
     "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "hint.css": "^2.6.0"
   }
 }
