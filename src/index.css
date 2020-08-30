@@ -26,7 +26,7 @@
     font-size: 23px;
     margin: 0%;
 }
-.imputs {
+.inputs {
     color: white;
     display: flex;
     justify-content: center;
@@ -34,10 +34,10 @@
     background-color: #337ab7;
     padding-bottom: 20px;
 }
-.imput__json {
+.input__json {
     width: 47%;
 }
-.imput__output {
+.input__output {
     width: 47%;
     
 }
@@ -83,7 +83,7 @@ button:hover {
     font-family: Source Sans Pro;
 }
 @media (max-width: 900px) {
-    .imputs {
+    .inputs {
         display: block;
         padding-left: 2%;
         padding-right: 2%;
@@ -116,4 +116,9 @@ button:hover {
         margin: 0%;
         padding-top: 5px;
     }
+}
+.footer__text {
+    text-align: right;
+    font-size: 16px;
+    margin-right: 40px;
 }

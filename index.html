@@ -1,52 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Postman AutoTest API</title>
-  <link rel=StyleSheet href="./src/index.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postman AutoTester</title>
+  <meta name="description"
+    content="A Postman based tool for automatic generation of unit test for endpoints based on JSON responses">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="./src/index.css" type="text/css">
 </head>
 <body>
-<div class="api">
-  <div class="header">
-    <h2 class="header__start"> Postman AutoTest API </h2>
-    <h2 class="header__end">Visitamos en <a>Sotware on the road</a></h2>
-</div>
-    <div class="imputs">  
-      <div class="imput__json">
-        <h3 class="title">Json Imput: </h3>
-        <textarea name="campo1" class="form-control" id="inputTextArea" rows="15"></textarea>
+  <div class="api">
+    <div class="header">
+      <h2 class="header__start"> Postman AutoTester </h2>
+    </div>
+    <div class="inputs">  
+      <div class="input__json">
+        <h3 class="title">JSON Input: </h3>
+        <textarea class="form-control" id="inputTextArea" style="resize:none;" rows="15"></textarea>
       </div>    
       <div class="main">
-        <button type="button" class="button__transforms" onclick="runConverter()" data-toggle="tooltip" data-placement="left" title="Generate Unit Tests!"> <!-- Generate Unit Tests!  --><span class="glyphicon glyphicon-chevron-right"></span></button>
-        <button type="button" class="button__copy" onclick="copiarAlPortapapeles()" data-toggle="tooltip" data-placement="right" title="Copy"><span class="glyphicon glyphicon-file"></span></button>
-        <button onclick="document.getElementById('inputTextArea').value = ''" data-toggle="tooltip" data-placement="right" title="Clear"><span class="glyphicon glyphicon-ban-circle"></span></button>
-        <button type="button" class="button__undo" onclick="undoTextArea()" data-toggle="tooltip" data-placement="right" title="Undo"><span class="glyphicon glyphicon-chevron-left"></span></button>
+        <button type="button" class="button__transforms" data-toggle="tooltip" data-placement="left" title="Generate Tests" id="button-generate-tests">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </button>
+        <button type="button" class="button__copy" data-toggle="tooltip" data-placement="right" title="Copy" id="button-copy">
+          <span class="glyphicon glyphicon-file"></span>
+        </button>
+        <button  data-toggle="tooltip" data-placement="right" title="Clear" id="button-clear">
+          <span class="glyphicon glyphicon-ban-circle"></span>
+        </button>
       </div>
-      <div class="imput__output">
-        <h3 class="title">Output: </h3>
-        <textarea readonly class="form-control" id="outputTextArea" rows="15"></textarea>
+      <div class="input__output">
+        <h3 class="title">Generated Tests: </h3>
+        <textarea readonly class="form-control" id="outputTextArea" style="resize:none;" rows="15"></textarea>
       </div>
     </div>    
-  <div class="footer">
-    <sub class="footer__text">Made with ❤️ by <a href="https://softwareontheroad.com/">Software On The Road</a></sub>
+    <div class="footer">
+      <p class="footer__text">Made with ❤️ by <a href="https://softwareontheroad.com/">Software On The Road</a></p>
+    </div>
   </div>
-</div>
-<script src="https://code.jquery.com/jquery.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="src/strategies/postman.js"></script>
-<script src="src/core.js"></script>
-<script src="src/index.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-68202440-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="/src/index.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68202440-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-68202440-4');
-</script>
-
-</body>
+    gtag('config', 'UA-68202440-4');
+  </script>
+  </body>
 </html>

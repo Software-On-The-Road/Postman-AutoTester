@@ -1,3 +1,3 @@
-# Postman-AutoTestAPI
+# Postman AutoTester
 
-Generate simple unit tests from JSONs for Postman collections
+A Postman based tool for automatic generation of unit test for endpoints based on JSON responses
