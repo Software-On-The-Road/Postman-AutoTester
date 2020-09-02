@@ -7,13 +7,18 @@
   <meta name="description"
     content="A Postman based tool for automatic generation of unit test for endpoints based on JSON responses">
   <link rel="manifest" href="/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
   <link rel="stylesheet" href="./src/index.css" type="text/css">
+
 </head>
 <body>
+  
   <div class="api">
     <div class="header">
-      <h2 class="header__start"> Postman AutoTester </h2>
+      <h2 class="header__start"> The Postman AutoTester </h2>
     </div>
+
     <div class="inputs">  
       <div class="input__json">
         <h3 class="title">JSON Input: </h3>
@@ -21,23 +26,46 @@
       </div>    
       <div class="main">
         <button type="button" class="button__transforms" data-toggle="tooltip" data-placement="left" title="Generate Tests" id="button-generate-tests">
-          <span class="glyphicon glyphicon-chevron-right"></span>
+          <i class="fas fa-chevron-right"></i>
         </button>
         <button type="button" class="button__copy" data-toggle="tooltip" data-placement="right" title="Copy" id="button-copy">
-          <span class="glyphicon glyphicon-file"></span>
+          <i class="fas fa-clipboard"></i>
         </button>
         <button  data-toggle="tooltip" data-placement="right" title="Clear" id="button-clear">
-          <span class="glyphicon glyphicon-ban-circle"></span>
+          <i class="fas fa-times"></i>
+        </button>
+        <button   data-toggle="modal" data-target="#exampleModal">
+          <i class="fas fa-question-circle help"></i>
         </button>
       </div>
       <div class="input__output">
         <h3 class="title">Generated Tests: </h3>
         <textarea readonly class="form-control" id="outputTextArea" style="resize:none;" rows="15"></textarea>
       </div>
-    </div>    
+    </div>   
+    
     <div class="footer">
-      <p class="footer__text">Made with ❤️ by <a href="https://softwareontheroad.com/">Software On The Road</a></p>
+      <p class="footer__text">Made with <i class="fas fa-heart"></i> by <a href="https://softwareontheroad.com/">Software On The Road</a></p>
     </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">how to use the converter</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"><i class="fas fa-times"></i></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
   </div>
   <script src="//code.jquery.com/jquery.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
