@@ -1,16 +1,21 @@
+body {
+    background: linear-gradient(90deg, #FF512F 0%, #F09819 100%);
+    font-family: 'Open Sans';
+}
 .a {
    color:#5581b5;
 }
 
 .h1, .h2, .h3, h1, h2, h3 {
+    font-family: 'Open Sans';
     padding-left: 15px;
     margin-top: 0px;
 }
 .header {
-    font-family: Source Sans Pro;
-    margin: 0;
-    height: 10vh;
-    background-color: #373d49;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: 9vh;
     color: white;
     align-items: center;
     padding-left: 20px;
@@ -19,26 +24,37 @@
     justify-content: space-between;
 }
 .header__start {
-    font-size: 23px;
-    margin: 0%;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 3.125em;
+    margin: auto;
 }
 .header__end {
-    font-size: 23px;
+    font-size: 3.125em;
     margin: 0%;
+}
+.title{
+    font-family: 'Open Sans';
+    font-size: 15px;
+}
+.fa-heart {
+    font-size: 20px;
+    margin: 0 5px;
+}
+.help{
+    color: #C0500E;
 }
 .inputs {
     color: white;
     display: flex;
     justify-content: center;
-    align-items: center;   
-    background-color: #337ab7;
+    align-items: start;   
     padding-bottom: 20px;
 }
 .input__json {
-    width: 47%;
+    width: 46%;
 }
 .input__output {
-    width: 47%;
+    width: 46%;
     
 }
 .form-control[id="inputTextArea"] {
@@ -51,10 +67,12 @@
     background-color: white;
 }
 .main {
+    margin-top: 77px;
     display: grid;
-    grid-gap: 15px;
+    grid-gap: 30px;
     font-size: 30px;
     color: white;
+    width: 78px;
 }
 button {
     border: none;
@@ -75,12 +93,14 @@ button:hover {
     left: 50%;
 }
 .footer {
-    background-color: #373d49;
     height: 5vh;
-    color: white;
-    padding-left: 30px;
+    color: #ffffff;
     font-size: 22px;
-    font-family: Source Sans Pro;
+    font-family: 'Open Sans';
+}
+.footer a {
+    color: #ffffff;
+    font-weight: bold;
 }
 @media (max-width: 900px) {
     .inputs {
@@ -106,8 +126,8 @@ button:hover {
         margin-top: 0%;
     }
     .header__start {
-        font-size: 20px;
-        margin: 0%;
+        font-size: 2em;
+        margin: auto;
         padding-right: 20px;
         padding-top: 5px;
     }
@@ -118,7 +138,7 @@ button:hover {
     }
 }
 .footer__text {
-    text-align: right;
+    padding: 10px 10px; 
+    text-align: center;
     font-size: 16px;
-    margin-right: 40px;
 }
